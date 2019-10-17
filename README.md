@@ -1,0 +1,1 @@
+[![Coverage Status](https://coveralls.io/repos/github/Ayushi-0903/swe1-app/badge.svg)](https://coveralls.io/github/Ayushi-0903/swe1-app)
