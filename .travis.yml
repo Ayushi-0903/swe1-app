@@ -22,4 +22,4 @@ script:
  - coverage run --source=swe1-app,polls manage.py test
 
 after_script:
- - coveralls
+ - coveralls -i
