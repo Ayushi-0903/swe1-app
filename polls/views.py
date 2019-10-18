@@ -1,4 +1,3 @@
-
 from .models import Question
 
 from django.shortcuts import render
