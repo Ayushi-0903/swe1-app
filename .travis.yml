@@ -19,7 +19,7 @@ before_script:
 script:
  - black --check . 
  - flake8 --ignore E501,F811,F401 .
- - coverage run --source=swe1-app manage.py test
+ - coverage run --source=swe1-app,polls manage.py test
 
 after_script:
  - coveralls
