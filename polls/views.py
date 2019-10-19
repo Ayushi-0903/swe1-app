@@ -1,9 +1,5 @@
-from .models import Question
-
-from django.shortcuts import render
-
 from django.shortcuts import get_object_or_404, render
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect
 from django.urls import reverse
 from .models import Choice, Question
 from django.utils import timezone
