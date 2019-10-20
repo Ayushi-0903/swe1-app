@@ -19,6 +19,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "polls/static"),
 ]
 
+STATICFILES_STORAGE = 'my_project.storage.WhiteNoiseStaticFilesStorage'
+
 # STATIC_ROOT = ''
 
 # https://stackoverflow.com/questions/23215581/unable-to-perform-collectstatic
