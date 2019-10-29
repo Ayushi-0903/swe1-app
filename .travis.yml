@@ -18,7 +18,7 @@ before_script:
 
 script:
  - black --check . 
- - flake8 .
+ - flake8 --ignore F811 .
  - coverage run --source=mysite,polls manage.py test
 
 after_script:
