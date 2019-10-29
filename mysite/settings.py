@@ -9,8 +9,9 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
-import os
 import django_heroku
+import os
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "sx9f+ci)%rh+cyfcv3q2n52s-*_(%-&sgqw-ru#lov$f4bp$ih"
+SECRET_KEY = "rf764pi%rx_!903-pb(0)9*+2uou)q1lgr7ba66ox^5o5g1niz"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -87,8 +88,7 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation."
-        "UserAttributeSimilarityValidator"
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
     },
     {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
     {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
@@ -115,8 +115,4 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-# Activate Django-Heroku.
-# Original version was causing Travis failures, modified version from here:
-# https://github.com/heroku/django-heroku/issues/39
-if "HOME" in os.environ and "/app" in os.environ["HOME"]:
-    django_heroku.settings(locals())
+django_heroku.settings(locals())
