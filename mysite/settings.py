@@ -115,6 +115,5 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-if "HOME" in os.environ and "/app" in os.environ["HOME"]:
+if "/app" in os.environ["HOME"]:
     django_heroku.settings(locals())
-
